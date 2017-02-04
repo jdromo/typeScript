@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.Default.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.NuGet.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.NuGet.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4755017D-3B0B-4B81-98CF-712B1FD1DB2F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gamming</RootNamespace>
+    <AssemblyName>Gamming</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\components\common.css" />
+    <Content Include="Content\css\game.css" />
+    <Content Include="Content\img\acoustica-sprite_20steps_2sec.png" />
+    <Content Include="Content\img\acoustica\clock.png" />
+    <Content Include="Content\img\acoustica\clockCircle.png" />
+    <Content Include="Content\img\acoustica\level1\1\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level1\1\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level1\1\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level1\2\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level1\2\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level1\2\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level1\3\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level1\3\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level1\3\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level1\4\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level1\4\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level1\4\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level2\1\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level2\1\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level2\1\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level2\2\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level2\2\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level2\2\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level2\3\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level2\3\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level2\3\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level2\4\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level2\4\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level2\4\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level3\1\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level3\1\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level3\1\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level3\2\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level3\2\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level3\2\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level3\3\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level3\3\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level3\3\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\level3\4\INSTRUMENT _ GREY.png" />
+    <Content Include="Content\img\acoustica\level3\4\INSTRUMENT _ RED.png" />
+    <Content Include="Content\img\acoustica\level3\4\INSTRUMENT _ WHITE.png" />
+    <Content Include="Content\img\acoustica\logo.png" />
+    <Content Include="Content\img\acoustica\score.png" />
+    <Content Include="Content\img\acoustica\scoreSmall.png" />
+    <Content Include="Content\img\acoustica\thumb.png" />
+    <Content Include="Content\img\acoustica\thumbHolder.png" />
+    <Content Include="Content\img\add--cross.png" />
+    <Content Include="Content\img\amandine.png" />
+    <Content Include="Content\img\arrow-player-mobile.png" />
+    <Content Include="Content\img\arrow-player.png" />
+    <Content Include="Content\img\arrow-rules.png" />
+    <Content Include="Content\img\bg_actoustica.jpg" />
+    <Content Include="Content\img\bg_free-quencies.jpg" />
+    <Content Include="Content\img\bg_selector.jpg" />
+    <Content Include="Content\img\billboard_bottom.png" />
+    <Content Include="Content\img\billboard_middle.png" />
+    <Content Include="Content\img\billboard_top.png" />
+    <Content Include="Content\img\board-bottom.png" />
+    <Content Include="Content\img\board-repeat.png" />
+    <Content Include="Content\img\board-top.png" />
+    <Content Include="Content\img\cross.png" />
+    <Content Include="Content\img\freequencies-sprite_20steps_2sec.png" />
+    <Content Include="Content\img\freequencies\background.jpg" />
+    <Content Include="Content\img\freequencies\calibrate.png" />
+    <Content Include="Content\img\freequencies\distortdot.png" />
+    <Content Include="Content\img\freequencies\distortUICircle.png" />
+    <Content Include="Content\img\freequencies\distortUIText.png" />
+    <Content Include="Content\img\freequencies\logo.png" />
+    <Content Include="Content\img\freequencies\scorepanel.png" />
+    <Content Include="Content\img\freequencies\white_glow_circle%402x.png" />
+    <Content Include="Content\img\headphone.png" />
+    <Content Include="Content\img\howtoplay_visual-actoustica-1.png" />
+    <Content Include="Content\img\howtoplay_visual-actoustica-2.png" />
+    <Content Include="Content\img\howtoplay_visual-actoustica-3.png" />
+    <Content Include="Content\img\howtoplay_visual-actoustica-mobile-2.png" />
+    <Content Include="Content\img\howtoplay_visual-actoustica-mobile.png" />
+    <Content Include="Content\img\howtoplay_visual-freequencies-1.png" />
+    <Content Include="Content\img\howtoplay_visual-freequencies-2.png" />
+    <Content Include="Content\img\howtoplay_visual-freequencies-3.png" />
+    <Content Include="Content\img\howtoplay_visual-freequencies-4.png" />
+    <Content Include="Content\img\howtoplay_visual-freequencies-mobile.png" />
+    <Content Include="Content\img\howtoplay_visual-selector-1.png" />
+    <Content Include="Content\img\howtoplay_visual-selector-2.png" />
+    <Content Include="Content\img\howtoplay_visual-selector-3.png" />
+    <Content Include="Content\img\howtoplay_visual-selector-mobile-2.png" />
+    <Content Include="Content\img\howtoplay_visual-selector-mobile.png" />
+    <Content Include="Content\img\levels.png" />
+    <Content Include="Content\img\logo-acoustica.png" />
+    <Content Include="Content\img\logo-freequencies.png" />
+    <Content Include="Content\img\logo-neuland.png" />
+    <Content Include="Content\img\logo-selector.png" />
+    <Content Include="Content\img\louise.png" />
+    <Content Include="Content\img\numbers.png" />
+    <Content Include="Content\img\padlock-sprite_25steps_1sec.png" />
+    <Content Include="Content\img\phone-icon.png" />
+    <Content Include="Content\img\prize_sample.png" />
+    <Content Include="Content\img\rule-sprite_517x140.png" />
+    <Content Include="Content\img\rules1--img.png" />
+    <Content Include="Content\img\rules1.png" />
+    <Content Include="Content\img\score-border.png" />
+    <Content Include="Content\img\selector-sprite_20steps_2sec.png" />
+    <Content Include="Content\img\selector\fakesmoke.jpg" />
+    <Content Include="Content\img\selector\female_enthusiastic.png" />
+    <Content Include="Content\img\selector\female_good.png" />
+    <Content Include="Content\img\selector\female_neutral.png" />
+    <Content Include="Content\img\selector\guitar.png" />
+    <Content Include="Content\img\selector\logo.png" />
+    <Content Include="Content\img\selector\male_enthusiastic.png" />
+    <Content Include="Content\img\selector\male_good.png" />
+    <Content Include="Content\img\selector\male_neutral.png" />
+    <Content Include="Content\img\selector\turntable.png" />
+    <Content Include="Content\img\share--icon.png" />
+    <Content Include="Content\img\share-arrow.png" />
+    <Content Include="Content\img\_freequencies-sprite_20steps_2sec.png" />
+    <Content Include="Content\models\level1\Bass.js" />
+    <Content Include="Content\models\level1\Drums.js" />
+    <Content Include="Content\models\level1\Guitar.js" />
+    <Content Include="Content\models\level1\Hangar.js" />
+    <Content Include="Content\models\level1\Synth.js" />
+    <Content Include="Content\models\level2\Cello.js" />
+    <Content Include="Content\models\level2\Concert.js" />
+    <Content Include="Content\models\level2\Kettledrum.js" />
+    <Content Include="Content\models\level2\MusicStand.js" />
+    <Content Include="Content\models\level2\Violin.js" />
+    <Content Include="Content\models\level3\Cymbals.js" />
+    <Content Include="Content\models\level3\Macbook.js" />
+    <Content Include="Content\models\level3\Nightclub.js" />
+    <Content Include="Content\models\level3\Synth.js" />
+    <Content Include="Content\models\level3\Turntable.js" />
+    <Content Include="Content\sounds\07_INDUSTRIAL_CATCH_ITEM.mp3" />
+    <Content Include="Content\sounds\08_INDUSTRIAL_END_LEVEL.mp3" />
+    <Content Include="Content\sounds\10_INDUSTRIAL_LIGHT_FX_01.mp3" />
+    <Content Include="Content\sounds\11_INDUSTRIAL_LIGHT_FX_2.mp3" />
+    <Content Include="Content\sounds\12_INDUSTRIAL_LIGHT_FX_3.mp3" />
+    <Content Include="Content\sounds\13_INDUSTRIAL_LIGHT_FX_4.mp3" />
+    <Content Include="Content\sounds\DROP_ITEM.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_1_DISTO_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_1_NORMAL_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_2_DISTO_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_2_NORMAL_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_3_DISTO_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_3_DISTO_MODE.mp3.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_3_NORMAL_MODE.mp3" />
+    <Content Include="Content\sounds\freeq_LEVEL_3_NORMAL_MODE.mp3.mp3" />
+    <Content Include="Content\sounds\GAME_OVER.mp3" />
+    <Content Include="Content\sounds\GAME_OVER_1.mp3" />
+    <Content Include="Content\sounds\level1.mp3" />
+    <Content Include="Content\sounds\level1\01_Intro_Sound_LOOP.mp3" />
+    <Content Include="Content\sounds\level1\01_Intro_Sound_LOOP.wav" />
+    <Content Include="Content\sounds\level1\01_Intro_Sound_LOOP1.mp3" />
+    <Content Include="Content\sounds\level1\02_Bass_Sound_LOOP.mp3" />
+    <Content Include="Content\sounds\level1\02_Bass_Sound_LOOP.wav" />
+    <Content Include="Content\sounds\level1\02_Bass_Sound_LOOP2.mp3" />
+    <Content Include="Content\sounds\level1\03_Keyboards_Sound_LOOP.mp3" />
+    <Content Include="Content\sounds\level1\03_Keyboards_Sound_LOOP.wav" />
+    <Content Include="Content\sounds\level1\03_Keyboards_Sound_LOOP3.mp3" />
+    <Content Include="Content\sounds\level1\04_Guitar_Sound_LOOP.mp3" />
+    <Content Include="Content\sounds\level1\04_Guitar_Sound_LOOP.wav" />
+    <Content Include="Content\sounds\level1\04_Guitar_Sound_LOOP4.mp3" />
+    <Content Include="Content\sounds\level1\05_Drums_Sound_LOOP.mp3" />
+    <Content Include="Content\sounds\level1\05_Drums_Sound_LOOP.wav" />
+    <Content Include="Content\sounds\level1\05_Drums_Sound_LOOP5.mp3" />
+    <Content Include="Content\sounds\level1\06_INDUSTRIAL_AMB_LOOP6.mp3" />
+    <Content Include="Content\sounds\level2.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_1_intro.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_1_intro.wav" />
+    <Content Include="Content\sounds\level2\Opera_Loop_2_violin.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_2_violin.wav" />
+    <Content Include="Content\sounds\level2\Opera_Loop_3_Drums.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_3_Drums.wav" />
+    <Content Include="Content\sounds\level2\Opera_Loop_4_Cello.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_4_Cello.wav" />
+    <Content Include="Content\sounds\level2\Opera_Loop_5_Lead.mp3" />
+    <Content Include="Content\sounds\level2\Opera_Loop_5_Lead.wav" />
+    <Content Include="Content\sounds\level3.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_1.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_1.wav" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_2.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_2.wav" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_3.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_3.wav" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_33.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_3_.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_3_.wav" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_4.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_4.wav" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_5.mp3" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_5.wav" />
+    <Content Include="Content\sounds\SCAN_NEW_01.mp3" />
+    <Content Include="Content\sounds\SCAN_NEW_2.mp3" />
+    <Content Include="Content\sounds\selector\track0_0.mp3" />
+    <Content Include="Content\sounds\selector\track0_1.mp3" />
+    <Content Include="Content\sounds\selector\track0_2.mp3" />
+    <Content Include="Content\sounds\selector\track1_0.mp3" />
+    <Content Include="Content\sounds\selector\track1_1.mp3" />
+    <Content Include="Content\sounds\selector\track1_2.mp3" />
+    <Content Include="Content\sounds\selector\track2_0.mp3" />
+    <Content Include="Content\sounds\selector\track2_1.mp3" />
+    <Content Include="Content\sounds\selector\track2_2.mp3" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\.DS_Store" />
+    <Content Include="Content\data\copy.json" />
+    <Content Include="Content\data\leaderboard.json" />
+    <Content Include="Content\font\1449411\4309f36f-0cda-4734-a3b9-ef4be9d2c0e9.woff2" />
+    <Content Include="Content\font\1449411\60c07f22-4b79-4061-9125-f8199895dcd2.ttf" />
+    <Content Include="Content\font\1449411\b335a43c-6013-46fc-9f7c-844381267a25.woff" />
+    <Content Include="Content\font\1449411\bf7436f9-b9ca-4526-8c3f-95b5b2671ce7.eot" />
+    <Content Include="Content\font\1449415\287bff63-8587-4f10-9b0e-80bad0d07c96.ttf" />
+    <Content Include="Content\font\1449415\62173537-5183-4121-977b-651d1306a9e1.woff" />
+    <Content Include="Content\font\1449415\9ab80fd2-572f-4b04-ab89-6dbf9cf36dae.woff2" />
+    <Content Include="Content\font\1449415\a5b3eef4-1a80-458a-ae84-86cca302fa16.eot" />
+    <Content Include="Content\font\1449433\0d3e949b-6ffc-4401-9e32-db85e07299ae.woff2" />
+    <Content Include="Content\font\1449433\7a9ce0f0-f647-4a28-8ee1-544c0db1b227.eot" />
+    <Content Include="Content\font\1449433\c609c1b6-9d12-4e8f-b6b3-f9a994ceef31.woff" />
+    <Content Include="Content\font\1449433\d91a0786-a274-4330-abd5-319deee771eb.ttf" />
+    <Content Include="Content\font\1449449\1b15903a-96e7-4d6a-81a3-037f5b4ca398.woff" />
+    <Content Include="Content\font\1449449\2c026db4-5fbd-48f3-bb94-c4be25058a35.eot" />
+    <Content Include="Content\font\1449449\5996bc6e-a83e-4405-940e-d3500b2f16d7.ttf" />
+    <Content Include="Content\font\1449449\bc90e417-8cd1-4c3e-9ae5-0f13622171dc.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Bold.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Bold.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Bold.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedBold.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedBold.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedBold.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedLight.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedLight.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedLight.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedRegular.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedRegular.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-CondensedRegular.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Light.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Light.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Light.woff2" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Regular.ttf" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Regular.woff" />
+    <Content Include="Content\font\NeulandGrotesk\NeulandGrotesk-Regular.woff2" />
+    <Content Include="Content\img\selector\female_enthusiastic.json" />
+    <Content Include="Content\img\selector\female_good.json" />
+    <Content Include="Content\img\selector\female_neutral.json" />
+    <Content Include="Content\img\selector\guitar.json" />
+    <Content Include="Content\img\selector\male_enthusiastic.json" />
+    <Content Include="Content\img\selector\male_good.json" />
+    <Content Include="Content\img\selector\male_neutral.json" />
+    <Content Include="Content\img\selector\turntable.json" />
+    <Content Include="Content\shaders\baseMaterial\baseMaterial.fs.glsl" />
+    <Content Include="Content\shaders\baseMaterial\baseMaterial.vs.glsl" />
+    <Content Include="Content\shaders\catchMaterial\catchMaterial.fs.glsl" />
+    <Content Include="Content\shaders\catchMaterial\catchMaterial.vs.glsl" />
+    <Content Include="Content\shaders\dropMaterial\dropMaterial.fs.glsl" />
+    <Content Include="Content\shaders\dropMaterial\dropMaterial.vs.glsl" />
+    <Content Include="Content\shaders\lineMaterial\lineMaterial.fs.glsl" />
+    <Content Include="Content\shaders\lineMaterial\lineMaterial.vs.glsl" />
+    <Content Include="Content\shaders\smoke.frag" />
+    <Content Include="Content\sounds\level3\Night_clup_loop_3_.ogg" />
+    <Content Include="Content\sounds\selector\level0.json" />
+    <Content Include="Content\sounds\selector\level1.json" />
+    <Content Include="Content\sounds\selector\level2.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\vendors\bluebird.min.js" />
+    <Content Include="Scripts\js\vendors\bootstrap.min.js" />
+    <Content Include="Scripts\js\vendors\buffer.loader.js" />
+    <Content Include="Scripts\js\vendors\dat.gui.min.js" />
+    <Content Include="Scripts\js\vendors\EasePack.min.js" />
+    <Content Include="Scripts\js\vendors\GlueFrame.js" />
+    <Content Include="Scripts\js\vendors\howler.js" />
+    <Content Include="Scripts\js\vendors\howler.min.js" />
+    <Content Include="Scripts\js\vendors\isMobile.min.js" />
+    <Content Include="Scripts\js\vendors\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\js\vendors\lodash.min.js" />
+    <Content Include="Scripts\js\vendors\NoSleep.min.js" />
+    <Content Include="Scripts\js\vendors\perlin.js" />
+    <Content Include="Scripts\js\vendors\pixi.min.js" />
+    <Content Include="Scripts\js\vendors\Pizzicato.min.js" />
+    <Content Include="Scripts\js\vendors\require.js" />
+    <Content Include="Scripts\js\vendors\screenfull.js" />
+    <Content Include="Scripts\js\vendors\swiper.jquery.min.js" />
+    <Content Include="Scripts\js\vendors\three.js" />
+    <Content Include="Scripts\js\vendors\Tween.js" />
+    <Content Include="Scripts\js\vendors\TweenLite.min.js" />
+    <Content Include="Scripts\js\vendors\victor.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="src\acoustica\Acoustica.js" />
+    <Content Include="src\require.config.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\js\vendors\pixi.min.js.map" />
+    <Content Include="src\tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\css\helpers\" />
+    <Folder Include="Scripts\App\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\js\vendors\greensock.d.ts" />
+    <TypeScriptCompile Include="Scripts\js\vendors\three.d.ts" />
+    <TypeScriptCompile Include="src\acoustica\Game.ts" />
+    <TypeScriptCompile Include="src\acoustica\Team.ts" />
+    <TypeScriptCompile Include="src\app.ts">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.1.8.11\tools\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12872</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12872/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

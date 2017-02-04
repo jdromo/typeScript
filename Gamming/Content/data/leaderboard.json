@@ -1,0 +1,38 @@
+{
+    "players": [
+        {
+            "name": "David M.",
+            "picture": "assets/img/amandine.png",
+            "date": "FRIDAY, 5TH OCTOBER",
+            "pts": "2550",
+            "current": false
+        },
+        {
+            "name": "amandine M.",
+            "date": "FRIDAY, 5TH OCTOBER",
+            "pts": "1824",
+            "currentPlayer": false
+        },
+        {
+            "name": "amandine M.",
+            "picture": "assets/img/amandine.png",
+            "date": "FRIDAY, 5TH OCTOBER",
+            "pts": "1268",
+            "currentPlayer": false
+        },
+        {
+            "name": "amandine M.",
+            "picture": "assets/img/amandine.png",
+            "date": "FRIDAY, 5TH OCTOBER",
+            "pts": "960",
+            "currentPlayer": true
+        },
+        {
+            "name": "amandine M.",
+            "picture": "assets/img/amandine.png",
+            "date": "FRIDAY, 5TH OCTOBER",
+            "pts": "137",
+            "currentPlayer": false
+        }
+    ]
+}

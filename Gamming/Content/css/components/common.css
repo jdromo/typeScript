@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "NeulandGrotesk-CondensedLight";
+    src: url("../font/NeulandGrotesk/NeulandGrotesk-CondensedLight.woff2") format("woff2"),   url("../font/NeulandGrotesk/NeulandGrotesk-CondensedLight.woff") format("woff"),   url("../font/NeulandGrotesk/NeulandGrotesk-CondensedLight.ttf") format("truetype"); }
+
+@font-face {
+    font-family: "NeulandGrotesk-CondensedRegular";
+    src: url("../font/NeulandGrotesk/NeulandGrotesk-CondensedRegular.woff2") format("woff2"),   url("../font/NeulandGrotesk/NeulandGrotesk-CondensedRegular.woff") format("woff"),   url("../font/NeulandGrotesk/NeulandGrotesk-CondensedRegular.ttf") format("truetype"); }
+
+@font-face {
+    font-family: "NeulandGrotesk-Regular";
+    src: url("../font/NeulandGrotesk/NeulandGrotesk-Regular.woff2") format("woff2"),   url("../font/NeulandGrotesk/NeulandGrotesk-Regular.woff") format("woff"),   url("../font/NeulandGrotesk/NeulandGrotesk-Regular.ttf") format("truetype"); }
+
+@font-face {
+    font-family: "NeulandGrotesk-Light";
+    src: url("../font/NeulandGrotesk/NeulandGrotesk-Light.woff2") format("woff2"),   url("../font/NeulandGrotesk/NeulandGrotesk-Light.woff") format("woff"),   url("../font/NeulandGrotesk/NeulandGrotesk-Light.ttf") format("truetype"); }
+
+@font-face {
+    font-family: "NeulandGrotesk-Bold";
+    src: url("../font/NeulandGrotesk/NeulandGrotesk-Bold.woff2") format("woff2"),   url("../font/NeulandGrotesk/NeulandGrotesk-Bold.woff") format("woff"),   url("../font/NeulandGrotesk/NeulandGrotesk-Bold.ttf") format("truetype");
+    font-weight: bold; }
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+li {
+  list-style: none; }
+
+ol, ul {
+  padding: 0; }
+
+a {
+  display: block; }
+
+h1 {
+  line-height: inherit;
+  margin: 0;
+  padding: 0; }
+
+button {
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  border: none; }
+
+body, html {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000; }
+
+.body-scrollable {
+  overflow: auto; }
+
+canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+
+.game {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed; }
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.overlayer {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  transition: all .3s ease-out;
+  cursor: url(../img/cross.png), auto;
+  overflow-y: auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.blackScreen--container {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%; }
+
+.main {
+  margin-top: 80px; }
+
+.logo {
+  text-indent: -9999px; }
+  .logo img {
+    display: block;
+    width: 80px;
+    position: absolute;
+    top: 30px;
+    left: 20px; }
+
+.neon-bord, .bouton, .game-quit-confirm .box {
+  border: 2px #a90d2c solid;
+  box-shadow: 0 0 30px 0px rgba(169, 13, 44, 0.65), -1px 2px 30px 0px rgba(169, 13, 44, 0.65) inset; }
+
+.bouton {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 65px;
+  width: 230px;
+  color: #fff;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  font-size: 16px;
+  font-family:      "NeulandGrotesk-Bold"; }
+  .bouton:hover {
+    text-decoration: none;
+    color: #fff;
+    -webkit-animation: boutonHover .25s linear;
+            animation: boutonHover .25s linear; }
+  .bouton:visited, .bouton:focus {
+    text-decoration: none;
+    color: #fff; }
+  .bouton.bouton-left {
+    float: right; }
+
+.back-button {
+  font-size: 22px;
+  text-transform: uppercase;
+  width: 70px;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family:      "NeulandGrotesk-Bold"; }
+  .back-button span {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/cross.png);
+    background-repeat: no-repeat;
+    background-size: 180% auto;
+    background-position: center;
+    display: inline-block;
+    transition: all .3s ease-out;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9); }
+  .back-button:hover {
+    color: transparent;
+    text-decoration: none; }
+    .back-button:hover span {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2); }
+
+.bouton--rules {
+  margin: 30px auto;
+  clear: both; }
+
+.bouton--rules--next:after {
+  content: '';
+  width: 24px;
+  height: 22px;
+  display: block;
+  background-image: url(../img/arrow-rules.png);
+  background-repeat: no-repeat;
+  position: relative;
+  left: 15px; }
+
+.legend {
+  color: #444444;
+  text-transform: uppercase;
+  font-weight: 300; }
+
+.theGame--container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+.interfaceGame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 100%;
+  opacity: 1; }
+
+.loadScreen--container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+#gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden; }
+
+.turn-phone--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none; }
+
+.moveWindowIn {
+  -webkit-animation: moveWindowIn .4s ease-out forwards;
+          animation: moveWindowIn .4s ease-out forwards;
+  display: block; }
+  .moveWindowIn.turn-phone--container + .game-quit {
+    display: none; }
+
+.moveWindowOut {
+  -webkit-animation: moveWindowOut .4s ease-out forwards;
+          animation: moveWindowOut .4s ease-out forwards;
+  display: none; }
+
+.game-quit {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  z-index: 100;
+  display: none; }
+  .game-quit.in-game {
+    display: block; }
+  .game-quit a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent url(../img/cross.png) no-repeat 50% 50%;
+    background-size: contain;
+    cursor: pointer; }
+
+.game-quit-confirm {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: all .3s ease-out;
+  cursor: url(../img/cross.png), auto;
+  overflow-y: auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .game-quit-confirm.opened {
+    display: block; }
+  .game-quit-confirm .box {
+    background-color: #000;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center; }
+    .game-quit-confirm .box a.btn {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }

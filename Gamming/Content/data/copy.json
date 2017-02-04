@@ -1,0 +1,128 @@
+{
+    "start": {
+        "start": "start game",
+        "rules": "how to play"
+    },
+    "leaderboard": {
+        "position":"n*",
+        "name":"name/date",
+        "score":"score"
+    },
+    "loading": {
+        "purcent": "%",
+        "purcentText": "loading",
+        "text": "best played with headphones.",
+        "button": "start"
+    },
+    "rules-selector": {
+        "back": "ba<span></span>ck",
+        "howtoplay":"how to play",
+        "rule1": {
+            "textMobile": "Can your mad DJ skills make an audience go crazy? Tap the buttons to hit the notes at exactly the right moment and prove you have what it takes!",
+            "text":"Can your mad DJ skills make an audience go crazy? Use the F, G and H key to hit the notes at exactly the right moment and prove you have what it takes!",
+            "button":"next"
+        },
+        "rule2": {
+            "text":"There’s more! When you see a new vinyl record, hold the spacebar for it to load and drop it at the right moment to make the party go through the roof. But… don’t forget to keep hitting the notes at the same time!",
+            "button":"next"
+        },
+        "rule3": {
+            "text":"The more you can make your audience go crazy, the higher your score gets!",
+            "button":"start experience"
+        }
+    },
+    "rules-acoustica": {
+        "back": "ba<span></span>ck",
+        "rule1": {
+            "textMobile": "Are you a sound perfectionist? Then put your thumb on the circle to navigate around the 3D room. Use another finger to tap the screen to send out sonar waves to discover where the four missing instruments are.",
+            "text":"Are you a true sound perfectionist? Then use the arrow keys to look and walk around in this 3D room to find out where the four missing instruments are.",
+            "button":"next"
+        },
+        "rule2": {
+            "text":"Have you found the instruments? Walk towards them to pick them up. Once you have, they will become icons on your screen. Get to the stage, to drop off the instrument and collect your points.",
+            "button":"next"
+        },
+        "rule3": {
+            "text":"Hey, speed up! Pick the instruments up and put them in the right spot on the stage as fast as you can - your time is limited. And remember: the faster you are, the more points you score!",
+            "button":"start experience"
+        }
+    },
+    "rules-freequencies": {
+        "back": "ba<span></span>ck",
+        "rule1": {
+            "textMobile": "Think you are a master of the sound system? Then tilt your phone backwards and forwards to follow the sound wave up and down and see if you’re really as good as you think!",
+            "text":"Think you are a master of the sound system? Move your mouse up and down to follow the sound wave and see if you’re really as good as you think!",
+            "button":"next"
+        },
+        "rule2": {
+            "text":"The better you follow the movement of the sound wave, the more points you score. Easy, right?",
+            "button":"next"
+        },
+        "rule3": {
+            "text":"Well, if it’s too easy…don’t miss the distort bubble! It will distort the sound wave and make it extra difficult for you to follow. If you manage to follow the sound wave now, you score extra points!",
+            "button":"start experience"
+        }
+    },
+    "levels": {
+        "backLabel": "ba<span></span>ck",
+        "scoreTotal": "total score",
+        "pts": "pts",
+        "level": "level",
+        "startGame": "start",
+        "restartGame": "restart",
+        "bestScore": "Your best score is",
+        "newUnlock": "New level unlocked!",
+        "toUnlock": "To unlock you need",
+        "shareButtonLabel": "or share to unlock this level"
+    },
+    "share": {
+        "title": "share with a <strong>friend</strong>",
+        "text": "Can’t wait to score enough points to experience this level? Share this game with a friend and we’ll unlock it for you!",
+        "textareaLabel": "Your message",
+        "textareaPlaceholder": "Tell your friend how awesome this game is",
+        "emailTitle": "fill with your friends'email",
+        "emailLabel": "email",
+        "emailPlaceholder": "johndo@example.com",
+        "checkBoxLabel": "I confirm that I know this person in real life and that this person is a legal age smoker residing in <country>.",
+        "buttonText": "SHARE AND UNLOCK"
+    },
+    "gameOver": {
+        "level": "level",
+        "pts": "pts",
+        "unlock": {
+            "red": "Awesome! You scored so many points",
+            "white": "you can now unlock the next level!",
+            "button": "To next level"
+        },
+        "retry": {
+            "red": "Too bad! You didn’t score enough points",
+            "white": "to unlock the next level…",
+            "button": "Try again"
+        },
+        "prize": {
+            "white": "Congratulations, you won<br />this amazing",
+            "red": "Check your mailbox for more info",
+            "button": "Play again"
+        },
+        "finish": {
+            "white": "Has completado tus niveles del día!",
+            "button": "Finalizar"
+        },
+        "complete": {
+            "white": "Congratulations<br />you completed the game",
+            "button": "Play again"
+        }
+    },
+    "gameQuit": {
+        "confirmation": "Are you sure?",
+        "yes": "yes",
+        "no": "no"
+    },
+    "game": {
+        "points":"PTS",
+        "score":"YOUR SCORE"
+    },
+    "turnPhone": {
+        "text": "Turn your phone to live the experience"
+    }
+}

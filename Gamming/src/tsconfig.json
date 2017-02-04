@@ -1,0 +1,17 @@
+﻿{
+  "compilerOptions": {
+    "module": "amd",
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "./"
+  },
+  "files": [
+    "../src/app.ts",
+    "../src/acoustica/Game.ts",
+    "../src/acoustica/Team.ts"
+  ],
+  "compileOnSave": true,
+  "buildOnSave": true
+}

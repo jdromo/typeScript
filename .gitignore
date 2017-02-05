@@ -244,3 +244,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 packages
+Gamming/bin
+Gamming/obj
